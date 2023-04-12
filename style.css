@@ -6,11 +6,20 @@
     text-decoration: none;
 }
 /* css variables */
-:root{
+:root,
+[data-theme="light"]{
     --dark: #043e7d;
-    --main-bg: #E0E1E3    ;
+    --main-bg: #E0E1E3;
     --second-bg: #5791b3;
 }
+
+[data-theme='dark']{
+    --dark: #A5D7E8;
+    --main-bg:  #0B2447;
+    --second-bg: #19376D;
+    --white: #ECF2FF;
+}
+
 /* using google font */
 body{
     background-color: var(--main-bg);
@@ -137,4 +146,76 @@ footer{
     color: var(--main-bg);
     height: 40px;
     padding: 10px;
+}
+.dark-mode-toggle{
+    width: 70px;
+    height: 35px;
+    font-size: 15px;
+    color: var(--dark);
+    background-color: var(--main-bg);
+    border: 1px solid var(--dark);
+    border-width: 1px;
+    border-radius: 5px;
+    outline: none;
+    display: flex;
+    margin-left: 59%;
+    justify-content: center;
+    align-items: center;
+}
+.dark-mode-toggle:hover{
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* dark mode colors */
+[data-theme='dark'] body{
+    background-color: var(--main-bg);
+    color: var(--dark);
+}
+[data-theme='dark'] nav{
+    background: var(--second-bg);
+}
+[data-theme='dark'] nav ul li a{
+    color: var(--dark);
+}
+[data-theme='dark'] nav ul li a:hover{
+    color: var(--main-bg);
+}
+[data-theme='dark'] .box{
+    background-color: var(--second-bg);
+}
+[data-theme='dark'] .name{
+    color: var(--dark);
+    background-color: var(--main-bg);
+    border: 1px solid var(--dark);
+}  
+[data-theme='dark'] #sub{
+    color: var(--dark);
+    background-color: var(--main-bg);
+    border: 1px solid var(--dark);
+}
+[data-theme='dark'] .box form label[for="checkbox"] a{
+   color: var(--dark);
+}
+[data-theme='dark'] footer{
+    background-color: var(--dark);
+    color: var(--main-bg);
+}
+[data-theme='dark'] .name:hover{
+    background-color:var(--white);
+    transition: 0.3s;
+}
+[data-theme='dark'] #sub:hover{
+    background-color: var(--white);
+    cursor: pointer;
+    transition: 0.3s;
+}
+[data-theme='dark'] .box form label[for="checkbox"] a:hover{
+    color: var(--white);
+    transition: 0.3s;
+}
+[data-theme='dark'] .dark-mode-toggle:hover{
+    background-color: var(--white);
+    cursor: pointer;
+    transition: 0.3s;
 }
